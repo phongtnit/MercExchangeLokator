@@ -16,6 +16,9 @@
     <Filter Include="Header Files\DirectX">
       <UniqueIdentifier>{42fc3169-308b-40b9-a5b7-997156f9c9e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Monitor">
+      <UniqueIdentifier>{5b4a4202-7296-40bb-ba47-b183887133e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SnaptureCLI.h">
@@ -32,6 +35,18 @@
     </ClInclude>
     <ClInclude Include="DXCapturer.h">
       <Filter>Header Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorInfor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dpi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MONITORDESC.h">
+      <Filter>Header Files\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeMonitorInfo.h">
+      <Filter>Header Files\Monitor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

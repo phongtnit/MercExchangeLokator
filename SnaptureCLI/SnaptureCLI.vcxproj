@@ -120,8 +120,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dpi.h" />
     <ClInclude Include="DX.h" />
     <ClInclude Include="DXCapturer.h" />
+    <ClInclude Include="MONITORDESC.h" />
+    <ClInclude Include="MonitorInfor.h" />
+    <ClInclude Include="NativeMonitorInfo.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SnaptureCLI.h" />
