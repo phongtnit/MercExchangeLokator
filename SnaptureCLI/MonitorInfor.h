@@ -21,6 +21,7 @@ namespace com {
 				property IntPtr ^MonitorHandle;
 				property IntPtr ^MonitorDC;
 				property String^ Name;
+				property String^ ModelName;
 				property System::Drawing::Rectangle^ ScreenRect;
 				property com::HellStormGames::Imaging::Dpi^ Dpi;
 			private:
@@ -58,8 +59,7 @@ namespace com {
 						h = nMonitorInfo->pMonitors[x]->Bounds.bottom - t;
 
 						monitorInfo->ScreenRect = gcnew System::Drawing::Rectangle(t, l, w, h);
-						monitorInfo->Name = gcnew String(nMonitorInfo->pMonitors[x]->DeviceName);
-
+						
 						Monitors->Add(monitorInfo);
 
 						delete monitorInfo;

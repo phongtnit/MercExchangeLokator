@@ -71,7 +71,16 @@ namespace com {
 				event EventHandler<FrameCapturingEventArgs^>^ onFrameCapturingStopped;
 				event EventHandler<FrameChangedEventArgs^>^ onFrameChanged;
 
-				
+				property Int32 Resolution 
+				{
+					Int32 get() {
+						return _Resolution;
+					}
+				private:
+					void set(Int32 value) {
+						_Resolution = value;
+					}
+				}
 				property  double FPS
 				{
 					double get() {
@@ -81,6 +90,7 @@ namespace com {
 						defaultFPS = value;
 					}
 				}
+
 				property bool isDPIAware;
 				property  bool isActive;
 				property  int FrameCount;
@@ -142,7 +152,11 @@ namespace com {
 					_monitorInfo->Monitors = nullptr;
 					delete _monitorInfo;
 					delete _instance;
+				}
 
+				void SetBitmapResolution(Int32 value) 
+				{
+					Resolution = value;
 				}
 				 void Start(FrameCapturingMethod captureMethod)
 				{
@@ -158,7 +172,6 @@ namespace com {
 					onFrameCapturingStarted(NULL, gcnew FrameCapturingEventArgs());
 
 					//-- we should also obtain monitors information as well.
-					
 					//BeginCapturing();
 				}
 				 void CaptureDesktop()
@@ -180,6 +193,7 @@ namespace com {
 						CurrentBitmap = nullptr;
 
 					CurrentBitmap = CaptureScreenRegion(x, y, width, height);
+					
 					if (CurrentBitmap != nullptr) {
 						onFrameCaptured(nullptr, gcnew FrameCapturedEventArgs(CurrentBitmap, FrameCount));
 						FrameCount = FrameCount + 1;
@@ -198,7 +212,7 @@ namespace com {
 				}
 			private:
 				int defaultFPS = 30;
-				
+				Int32 _Resolution = 96;
 				property  System::Drawing::Bitmap^ PreviousBitmap;
 				property  System::Drawing::Bitmap^ CurrentBitmap;
 				property  FrameCapturingMethod frameCaptureMethod;
@@ -297,8 +311,7 @@ namespace com {
 					DeleteDC(hCaptureDC);
 
 					bitmap = System::Drawing::Image::FromHbitmap((IntPtr)hCaptureBitmap);
-
-					bitmap->SetResolution(_monitorInfo->Monitors[CurrentMonitorIndex]->Dpi->X, _monitorInfo->Monitors[CurrentMonitorIndex]->Dpi->Y);
+					bitmap->SetResolution(Resolution, Resolution);
 					DeleteObject(hCaptureBitmap);
 					return bitmap;
 				}
@@ -335,9 +348,7 @@ namespace com {
 					DeleteDC(hCaptureDC);
 
 					bitmap = System::Drawing::Image::FromHbitmap((IntPtr)hCaptureBitmap);
-					
-					//bitmap->SetResolution(_monitorInfo->Monitors[CurrentMonitorIndex]->Dpi->X, _monitorInfo->Monitors[CurrentMonitorIndex]->Dpi->Y);
-
+					bitmap->SetResolution(Resolution, Resolution);
 					DeleteObject(hCaptureBitmap);
 					return bitmap;
 				}
