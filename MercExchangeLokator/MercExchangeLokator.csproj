@@ -99,9 +99,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SnaptureCLI, Version=1.0.8576.23239, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x64\Debug\SnaptureCLI.dll</HintPath>
+    <Reference Include="Snapture">
+      <HintPath>Dlls\Release\Snapture.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -199,10 +198,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Emgu.CV.Bitmap">
-      <Version>4.7.0.5276</Version>
+      <Version>4.9.0.5494</Version>
     </PackageReference>
     <PackageReference Include="Emgu.CV.runtime.windows">
-      <Version>4.7.0.5276</Version>
+      <Version>4.9.0.5494</Version>
     </PackageReference>
     <PackageReference Include="WriteableBitmapEx">
       <Version>1.6.8</Version>
