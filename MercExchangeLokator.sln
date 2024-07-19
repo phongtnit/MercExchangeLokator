@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercExchangeLokator", "MercExchangeLokator\MercExchangeLokator.csproj", "{0CB34767-7FD5-420A-9A30-5976F4FA8664}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23} = {0A2A298D-74A5-43CC-8E1C-733FB4018C23}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnaptureCLI", "SnaptureCLI\SnaptureCLI.vcxproj", "{0A2A298D-74A5-43CC-8E1C-733FB4018C23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,22 +33,6 @@ Global
 		{0CB34767-7FD5-420A-9A30-5976F4FA8664}.Release|x64.Build.0 = Release|x64
 		{0CB34767-7FD5-420A-9A30-5976F4FA8664}.Release|x86.ActiveCfg = Release|x86
 		{0CB34767-7FD5-420A-9A30-5976F4FA8664}.Release|x86.Build.0 = Release|x86
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|Any CPU.Build.0 = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|ARM64.ActiveCfg = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|ARM64.Build.0 = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|x64.ActiveCfg = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|x64.Build.0 = Debug|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|x86.ActiveCfg = Debug|Win32
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Debug|x86.Build.0 = Debug|Win32
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|Any CPU.ActiveCfg = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|Any CPU.Build.0 = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|ARM64.ActiveCfg = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|ARM64.Build.0 = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|x64.ActiveCfg = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|x64.Build.0 = Release|x64
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|x86.ActiveCfg = Release|Win32
-		{0A2A298D-74A5-43CC-8E1C-733FB4018C23}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

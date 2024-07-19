@@ -99,9 +99,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SnaptureCLI, Version=1.0.8576.23239, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x64\Debug\SnaptureCLI.dll</HintPath>
+    <Reference Include="Snapture">
+      <HintPath>Dlls\Release\Snapture.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -181,37 +180,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\camera_64x64.png">
+    <Content Include="Images\camera_64x64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\SettingsIcon01.png">
+    </Content>
+    <Content Include="Images\SettingsIcon01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\captureIcon01.png" />
-    <Resource Include="Images\stopCaptureIcon01.png" />
+    <Content Include="Images\captureIcon01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\stopCaptureIcon01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Ref\merc_exchange_sample.png">
+    <Content Include="Images\Ref\merc_exchange_sample.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Emgu.CV.Bitmap">
-      <Version>4.7.0.5276</Version>
+      <Version>4.9.0.5494</Version>
     </PackageReference>
     <PackageReference Include="Emgu.CV.runtime.windows">
-      <Version>4.7.0.5276</Version>
+      <Version>4.9.0.5494</Version>
     </PackageReference>
     <PackageReference Include="WriteableBitmapEx">
       <Version>1.6.8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Ref\merc_exchange_sample02.png">
+    <Content Include="Images\Ref\merc_exchange_sample02.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

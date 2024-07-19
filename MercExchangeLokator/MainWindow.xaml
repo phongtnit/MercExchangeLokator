@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MercExchangeLokator"
         mc:Ignorable="d"
-        Title="Merc Exchange Lokator v0.1" Width="800" WindowStyle="ToolWindow" Closing="Window_Closing" Loaded="Window_Loaded" Unloaded="Window_Unloaded" SizeToContent="Height">
-    <Grid>
+        Title="Merc Exchange Lokator v0.1" WindowStyle="ToolWindow" Closing="Window_Closing" Loaded="Window_Loaded" Unloaded="Window_Unloaded" SizeToContent="WidthAndHeight">
+    <Grid MinWidth="200">
         <DockPanel LastChildFill="True">
             <ToolBarPanel Height="24" VerticalAlignment="Top">
                 <ToolBar Height="24">
-                    <Image Source="Images/captureIcon01.png" Height="16" Width="16" x:Name="StartCaptureBtn" Margin="5,0" ToolTip="Start Screen Capturing" IsEnabled="True" MouseDown="StartCaptureBtn_MouseDown">
+                    <Image Source="pack://application:,,,/Images/captureIcon01.png" Height="16" Width="16" x:Name="StartCaptureBtn" Margin="5,0" ToolTip="Start Screen Capturing" IsEnabled="True" MouseDown="StartCaptureBtn_MouseDown">
                         <Image.Style>
                             <Style TargetType="Image">
                                 <Style.Triggers>
@@ -21,7 +21,7 @@
                             </Style>
                         </Image.Style>
                     </Image>
-                    <Image Source="Images/stopCaptureIcon01.png" Height="16" Width="16" x:Name="StopCaptureBtn" Margin="5,0" ToolTip="Stop Screen Capturing" IsEnabled="False" MouseDown="StopCaptureBtn_MouseDown">
+                    <Image Source="pack://application:,,,/Images/stopCaptureIcon01.png" Height="16" Width="16" x:Name="StopCaptureBtn" Margin="5,0" ToolTip="Stop Screen Capturing" IsEnabled="False" MouseDown="StopCaptureBtn_MouseDown">
                         <Image.Style>
                             <Style TargetType="Image">
                                 <Style.Triggers>
@@ -33,7 +33,7 @@
                         </Image.Style>
 
                     </Image>
-                    <Image Source="Images/SettingsIcon01.png" Height="16" Width="16" x:Name="SettingsBtn" Margin="5,0" ToolTip="Settings" MouseDown="SettingsBtn_MouseDown"/>
+                    <Image Source="pack://application:,,,/Images/SettingsIcon01.png" Height="16" Width="16" x:Name="SettingsBtn" Margin="5,0" ToolTip="Settings" MouseDown="SettingsBtn_MouseDown"/>
                 </ToolBar>
             </ToolBarPanel>
         </DockPanel>

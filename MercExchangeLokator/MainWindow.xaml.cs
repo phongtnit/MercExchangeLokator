@@ -20,7 +20,8 @@ using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 
-using com.HellScape.ScreenCapture;
+using com.HellstormGames.ScreenCapture;
+
 using System.Reflection;
 
 namespace MercExchangeLokator
@@ -59,6 +60,8 @@ namespace MercExchangeLokator
         Lokator Lokator { get; set; }
 
         double matchingTolerence = 0.6;
+
+        Snapture Snapture { get; set; }
 
         public double ScaleFactor
         {
@@ -277,7 +280,8 @@ namespace MercExchangeLokator
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.Topmost = true;
-          
+            Snapture = new Snapture(); 
+
             refImage = new Image<Bgr, byte>(refFile);
             if (refImage != null)
                 System.Diagnostics.Debug.WriteLine($"Successfully loaded reference image: {refFile}");
